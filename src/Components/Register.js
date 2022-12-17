@@ -19,7 +19,7 @@ export default function Register() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost/reactjs_login_registration/api/register.php",
+        "http://localhost/inventory-react-php-mysql/api/register.php",
         info
       )
       .then((res) => {

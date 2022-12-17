@@ -18,7 +18,7 @@ export default function Login() {
     // console.log(user);
 
     axios
-      .post("http://localhost/reactjs_login_registration/api/login.php", user)
+      .post("http://localhost/inventory-react-php-mysql/api/login.php", user)
       .then((response) => {
         // console.log(response.data);
 

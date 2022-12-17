@@ -26,7 +26,7 @@ const AllProduct = () => {
   const allprod = async () => {
     axios
       .get(
-        "http://localhost/react-inventory/api/product/allproducts.php"
+        "http://localhost/inventory-react-php-mysql/api/product/allproducts.php"
       )
       .then((res) => {
         setProduct(res.data.datas.pr);

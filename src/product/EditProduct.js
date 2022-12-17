@@ -17,7 +17,7 @@ const EditProduct = () => {
   const productsubmit = () =>
     axios
       .post(
-        "http://localhost/wdpf51_reactjs/22nov2022/reactapp2/api/updateproduct.php",
+        "http://localhost/inventory-react-php-mysql/api/product/updateproduct.php",
         {
           prid: product.id,
           prname: product.name,

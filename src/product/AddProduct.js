@@ -22,7 +22,7 @@ const AddProduct = () => {
     e.persist();
     axios
       .post(
-        "http://localhost/react-inventory/api/product/addproduct.php",
+        "http://localhost/inventory-react-php-mysql/api/product/addproduct.php",
         {
           pname: prodinfo.name,
           pquantity: prodinfo.quantity,

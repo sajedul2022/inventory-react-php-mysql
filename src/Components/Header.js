@@ -21,9 +21,7 @@ export default function Header() {
   return (
     <div class="container">
       <div class="row">
-        <div class="p-5 jamb bg-primary  text-center">
-          <p>Stock Management System!</p>
-        </div>
+        
 
         <nav class="navbar navbar-expand-sm ">
         
