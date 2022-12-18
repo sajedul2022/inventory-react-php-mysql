@@ -58,9 +58,9 @@ export default function Home() {
                   <div class="col-md-7 col-lg-6 px-md-2 px-xl-6 text-center text-md-start">
                     <div class="card-body px-4 py-5 p-lg-3 p-md-4">
                       <h1 class="mb-4 fw-bold">
-                        We are a high-level data
+                        We are a high-level Product 
                         <br class="d-md-none d-xxl-block" />
-                        storage bank
+                          storage bank
                       </h1>
                       <p class="card-text">
                         The place to store various data that you can access at

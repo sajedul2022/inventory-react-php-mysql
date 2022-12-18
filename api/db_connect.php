@@ -6,6 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 $db_conn = mysqli_connect("localhost", "root", "", "inventory_system");
+// $db_conn = mysqli_connect("localhost", "u318076185_inventory_reac", "2Mr?n!6]6Uvg", "u318076185_inventory_reac");
 
 // Check connection
 if ($db_conn === false) {

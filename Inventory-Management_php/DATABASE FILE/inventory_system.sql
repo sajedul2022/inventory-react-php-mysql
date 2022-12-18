@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 10:15 AM
+-- Generation Time: Dec 13, 2022 at 01:55 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -37,8 +37,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
+(11, 'Electric Item'),
 (9, 'Laptop'),
-(10, 'Mobail');
+(10, 'Mobile'),
+(12, 'Security Item');
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,11 @@ INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
 (1, 'lenovo-thinkpad.png', 'image/png'),
 (3, 'hp i5.png', 'image/png'),
 (4, 'Vivo F17pro.png', 'image/png'),
-(5, 'vivo 1.jpg', 'image/jpeg');
+(5, 'vivo 1.jpg', 'image/jpeg'),
+(6, 'fridge.jpg', 'image/jpeg'),
+(7, 'ledtv.jpg', 'image/jpeg'),
+(8, 'iron.jpg', 'image/jpeg'),
+(9, 'cctv.jpg', 'image/jpeg');
 
 -- --------------------------------------------------------
 
@@ -84,8 +90,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `quantity`, `buy_price`, `sale_price`, `categorie_id`, `media_id`, `date`) VALUES
-(14, 'Hp i5', '85', '30000.00', '40000.00', 9, 3, '2021-06-18 16:58:35'),
-(15, 'Vivo F17 Pro ', '85', '10000.00', '15000.00', 10, 4, '2021-06-18 16:59:08');
+(14, 'Hp i5', '75', '30000.00', '40000.00', 9, 3, '2021-06-18 16:58:35'),
+(15, 'Vivo F17 Pro ', '70', '10000.00', '15000.00', 10, 4, '2021-06-18 16:59:08'),
+(16, 'LED TV', '20', '24000.00', '30000.00', 9, 4, '2022-12-13 12:02:58'),
+(18, 'Fridge', '25', '24000.00', '30000.00', 11, 6, '2022-12-13 13:02:41'),
+(19, 'CC TV', '180', '12000.00', '16000.00', 12, 9, '2022-12-13 13:08:24');
 
 -- --------------------------------------------------------
 
@@ -134,7 +143,11 @@ CREATE TABLE `sales` (
 
 INSERT INTO `sales` (`id`, `product_id`, `qty`, `price`, `date`) VALUES
 (9, 15, 15, '225000.00', '2021-06-18'),
-(10, 14, 15, '600000.00', '2021-06-18');
+(10, 14, 15, '600000.00', '2021-06-18'),
+(11, 14, 10, '400000.00', '2022-12-13'),
+(12, 15, 15, '225000.00', '2022-12-13'),
+(13, 19, 20, '320000.00', '2022-12-13'),
+(14, 18, 10, '300000.00', '2022-12-13');
 
 -- --------------------------------------------------------
 
@@ -158,7 +171,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `image`, `status`, `last_login`) VALUES
-(1, 'Sajedul Islam', 'Admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, '5xh2edai1.jpeg', 1, '2022-12-12 10:04:53'),
+(1, 'Sajedul Islam', 'Admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'y6usnokr1.jpeg', 1, '2022-12-13 13:45:20'),
 (6, 'Akash Jadhav', 'product', 'e5d3240facd7a778cea38f63ce14ab345670d308', 2, 'vfb37vff6.png', 1, '2021-06-18 17:01:20'),
 (7, 'Yash Jadhav', 'Sales', '36242979372ad4ebf65325270a9e9456604241aa', 3, '56qdigj7.png', 1, '2021-06-18 17:04:06');
 
@@ -246,19 +259,19 @@ ALTER TABLE `user_groups`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -270,7 +283,7 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
