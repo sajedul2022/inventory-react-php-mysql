@@ -20,6 +20,7 @@ export default function Register() {
     axios
       .post(
         "http://localhost/inventory-react-php-mysql/api/register.php",
+        // "api/register.php",
         info
       )
       .then((res) => {

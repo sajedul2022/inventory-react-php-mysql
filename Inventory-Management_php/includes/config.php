@@ -5,7 +5,7 @@
   // define( 'DB_USER', 'u318076185_inventory_reac' );
 
   define( 'DB_PASS', '' );             // Set database password
-  // define( 'DB_PASS', '2Mr?n!6]6Uvg' );
+  // define( 'DB_PASS', 'E|2|lfZlyj' );
 
 
   define( 'DB_NAME', 'inventory_system' );        // Set database name
